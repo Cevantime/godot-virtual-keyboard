@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://addons/godot-virtual-keyboard/Keyboard.tscn" type="PackedScene" id=1]
+[ext_resource path="res://addons/godot-virtual-keyboard/LineEditGamepad.tscn" type="PackedScene" id=2]
+[ext_resource path="res://TestKeyboard.gd" type="Script" id=3]
+
+[node name="TestKeyboard" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -27.5
+margin_top = -91.0
+margin_right = 27.5
+margin_bottom = -71.0
+text = "Button"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LineEditGamepad" parent="." instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -82.5
+margin_top = -21.5
+margin_right = 82.5
+margin_bottom = 21.5
+keyboard_path = NodePath("../../TestKeyboard/Keyboard")
+
+[node name="LineEditGamepad2" parent="." instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -82.5
+margin_top = 83.5
+margin_right = 82.5
+margin_bottom = 126.5
+keyboard_path = NodePath("../../TestKeyboard/Keyboard")
+
+[node name="Keyboard" parent="." instance=ExtResource( 1 )]
+
+[editable path="Keyboard"]

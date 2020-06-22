@@ -1,0 +1,409 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://addons/godot-virtual-keyboard/Key.tscn" type="PackedScene" id=1]
+[ext_resource path="res://addons/godot-virtual-keyboard/Keyboard.gd" type="Script" id=2]
+
+[sub_resource type="Animation" id=1]
+resource_name = "enter"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Panel:margin_top")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 43.0, -257.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Panel:margin_bottom")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 300.0, 0.0 ]
+}
+
+[node name="Keyboard" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="Panel" type="Panel" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -358.0
+margin_top = 43.0
+margin_right = 358.0
+margin_bottom = 300.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 10
+custom_constants/margin_top = 10
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 706.0
+margin_bottom = 247.0
+custom_constants/separation = 25
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/HBoxContainer"]
+margin_right = 589.0
+margin_bottom = 237.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer"]
+margin_right = 589.0
+margin_bottom = 56.0
+size_flags_vertical = 3
+
+[node name="Q" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer" instance=ExtResource( 1 )]
+margin_right = 55.0
+margin_bottom = 56.0
+text = "Q"
+character = "Q"
+
+[node name="W" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer" instance=ExtResource( 1 )]
+margin_left = 59.0
+margin_right = 114.0
+margin_bottom = 56.0
+text = "W"
+character = "W"
+
+[node name="E" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer" instance=ExtResource( 1 )]
+margin_left = 118.0
+margin_right = 173.0
+margin_bottom = 56.0
+text = "E"
+character = "E"
+
+[node name="R" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer" instance=ExtResource( 1 )]
+margin_left = 177.0
+margin_right = 232.0
+margin_bottom = 56.0
+text = "R"
+character = "R"
+
+[node name="T" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer" instance=ExtResource( 1 )]
+margin_left = 236.0
+margin_right = 291.0
+margin_bottom = 56.0
+text = "T"
+character = "T"
+
+[node name="Y" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer" instance=ExtResource( 1 )]
+margin_left = 295.0
+margin_right = 350.0
+margin_bottom = 56.0
+text = "Y"
+character = "Y"
+
+[node name="U" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer" instance=ExtResource( 1 )]
+margin_left = 354.0
+margin_right = 409.0
+margin_bottom = 56.0
+text = "U"
+character = "U"
+
+[node name="I" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer" instance=ExtResource( 1 )]
+margin_left = 413.0
+margin_right = 468.0
+margin_bottom = 56.0
+text = "I"
+character = "I"
+
+[node name="O" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer" instance=ExtResource( 1 )]
+margin_left = 472.0
+margin_right = 527.0
+margin_bottom = 56.0
+text = "O"
+character = "O"
+
+[node name="P2" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer" instance=ExtResource( 1 )]
+margin_left = 531.0
+margin_right = 589.0
+margin_bottom = 56.0
+text = "P"
+character = "P"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer"]
+margin_top = 60.0
+margin_right = 589.0
+margin_bottom = 116.0
+size_flags_vertical = 3
+
+[node name="A" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer2" instance=ExtResource( 1 )]
+margin_right = 55.0
+margin_bottom = 56.0
+focus_neighbour_left = NodePath("../Back")
+text = "A"
+character = "A"
+
+[node name="S" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer2" instance=ExtResource( 1 )]
+margin_left = 59.0
+margin_right = 114.0
+margin_bottom = 56.0
+text = "S"
+character = "S"
+
+[node name="D" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer2" instance=ExtResource( 1 )]
+margin_left = 118.0
+margin_right = 173.0
+margin_bottom = 56.0
+text = "D"
+character = "D"
+
+[node name="F" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer2" instance=ExtResource( 1 )]
+margin_left = 177.0
+margin_right = 232.0
+margin_bottom = 56.0
+text = "F"
+character = "F"
+
+[node name="G" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer2" instance=ExtResource( 1 )]
+margin_left = 236.0
+margin_right = 291.0
+margin_bottom = 56.0
+text = "G"
+character = "G"
+
+[node name="H" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer2" instance=ExtResource( 1 )]
+margin_left = 295.0
+margin_right = 350.0
+margin_bottom = 56.0
+text = "H"
+character = "H"
+
+[node name="J" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer2" instance=ExtResource( 1 )]
+margin_left = 354.0
+margin_right = 409.0
+margin_bottom = 56.0
+text = "J"
+character = "J"
+
+[node name="K" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer2" instance=ExtResource( 1 )]
+margin_left = 413.0
+margin_right = 468.0
+margin_bottom = 56.0
+text = "K"
+character = "K"
+
+[node name="L" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer2" instance=ExtResource( 1 )]
+margin_left = 472.0
+margin_right = 527.0
+margin_bottom = 56.0
+text = "L"
+character = "L"
+
+[node name="Exclamation" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer2" instance=ExtResource( 1 )]
+margin_left = 531.0
+margin_right = 589.0
+margin_bottom = 56.0
+text = "!"
+character = "!"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer"]
+margin_top = 120.0
+margin_right = 589.0
+margin_bottom = 176.0
+size_flags_vertical = 3
+
+[node name="Z" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer3" instance=ExtResource( 1 )]
+margin_right = 55.0
+margin_bottom = 56.0
+text = "Z"
+character = "Z"
+
+[node name="X" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer3" instance=ExtResource( 1 )]
+margin_left = 59.0
+margin_right = 114.0
+margin_bottom = 56.0
+text = "X"
+character = "X"
+
+[node name="C" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer3" instance=ExtResource( 1 )]
+margin_left = 118.0
+margin_right = 173.0
+margin_bottom = 56.0
+text = "C"
+character = "C"
+
+[node name="V" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer3" instance=ExtResource( 1 )]
+margin_left = 177.0
+margin_right = 232.0
+margin_bottom = 56.0
+text = "V"
+character = "V"
+
+[node name="B" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer3" instance=ExtResource( 1 )]
+margin_left = 236.0
+margin_right = 291.0
+margin_bottom = 56.0
+text = "B"
+character = "B"
+
+[node name="N" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer3" instance=ExtResource( 1 )]
+margin_left = 295.0
+margin_right = 350.0
+margin_bottom = 56.0
+text = "N"
+character = "N"
+
+[node name="M" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer3" instance=ExtResource( 1 )]
+margin_left = 354.0
+margin_right = 409.0
+margin_bottom = 56.0
+text = "M"
+character = "M"
+
+[node name="Point" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer3" instance=ExtResource( 1 )]
+margin_left = 413.0
+margin_right = 468.0
+margin_bottom = 56.0
+text = "."
+character = "."
+
+[node name="Colon" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer3" instance=ExtResource( 1 )]
+margin_left = 472.0
+margin_right = 527.0
+margin_bottom = 56.0
+text = ","
+character = ","
+
+[node name="QuestionMark" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer3" instance=ExtResource( 1 )]
+margin_left = 531.0
+margin_right = 589.0
+margin_bottom = 56.0
+text = "?"
+character = "?"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer"]
+margin_top = 180.0
+margin_right = 589.0
+margin_bottom = 237.0
+size_flags_vertical = 3
+
+[node name="Space" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer4" instance=ExtResource( 1 )]
+margin_right = 526.0
+margin_bottom = 57.0
+size_flags_stretch_ratio = 9.0
+text = " "
+character = " "
+
+[node name="SwitchButton" type="Button" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer4" groups=[
+"keyboard_action",
+]]
+margin_left = 530.0
+margin_right = 589.0
+margin_bottom = 57.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Switch"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Panel/MarginContainer/HBoxContainer"]
+margin_left = 614.0
+margin_right = 696.0
+margin_bottom = 237.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer2"]
+margin_right = 82.0
+margin_bottom = 76.0
+size_flags_vertical = 3
+
+[node name="Left" type="Button" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer" groups=[
+"keyboard_action",
+]]
+margin_right = 20.0
+margin_bottom = 76.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "<"
+
+[node name="Right" type="Button" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer" groups=[
+"keyboard_action",
+]]
+margin_left = 24.0
+margin_right = 44.0
+margin_bottom = 76.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = ">"
+
+[node name="Del" type="Button" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer" groups=[
+"keyboard_action",
+]]
+margin_left = 48.0
+margin_right = 82.0
+margin_bottom = 76.0
+text = "Del"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer2"]
+margin_top = 80.0
+margin_right = 82.0
+margin_bottom = 156.0
+size_flags_vertical = 3
+
+[node name="Shift" type="Button" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer2" groups=[
+"keyboard_action",
+]]
+margin_right = 82.0
+margin_bottom = 76.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Shift"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer2"]
+margin_top = 160.0
+margin_right = 82.0
+margin_bottom = 237.0
+size_flags_vertical = 3
+
+[node name="Enter" type="Button" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer3" groups=[
+"keyboard_action",
+]]
+margin_right = 82.0
+margin_bottom = 77.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0
+text = "Validate"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/enter = SubResource( 1 )
+[connection signal="pressed" from="Panel/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer/Left" to="." method="_on_Left_pressed"]
+[connection signal="pressed" from="Panel/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer/Right" to="." method="_on_Right_pressed"]
+[connection signal="pressed" from="Panel/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer/Del" to="." method="_on_Del_pressed"]
+[connection signal="pressed" from="Panel/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer2/Shift" to="." method="_on_Shift_pressed"]
+[connection signal="pressed" from="Panel/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer3/Enter" to="." method="_on_Enter_pressed"]

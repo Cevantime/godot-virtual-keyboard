@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://addons/godot-virtual-keyboard/Key.gd" type="Script" id=1]
+
+[node name="Key" type="Button" groups=[
+"keyboard_action",
+"keyboard_key",
+]]
+margin_right = 696.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="." to="." method="_on_Key_pressed"]
+[connection signal="renamed" from="." to="." method="_on_Key_renamed"]
